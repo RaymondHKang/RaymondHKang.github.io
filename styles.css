@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Note most background colors are for debug purposes and all are put at the start */
+
+html {
+    background-color: rgb(105, 105, 105);
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+#side {
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+}
+
+
+#trait {
+    margin-bottom: -2px;
+    font-size: 12px;
+}
+
+#main {
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 85%;
+  }
+  
+  h1 {
+    /*background-color: beige;
+    text-shadow:
+    -1px 0px 0px black,
+    1px 0px 0px black,
+    0px -1px 0px black,
+    0px 1px 0px black;
+    color: white;*/
+    font-family: 'Inter', sans-serif;
+    font-size: 60px;
+  }
+
+  div#TopLinks {
+    /*background-color: green;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  #logo {
+    max-height: 50px;
+    max-width: 50px;
+  }
+
+  #ProfilePic {
+    /*height: auto;*/
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  #buttons {
+    margin-top: 5px;
+  }
+
+  #arrow {
+    max-height: 15px;
+  }
+  
+  p {
+    /*background-color: yellow;*/
+    font-family: verdana;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: 'Open Sans', sans-serif;
+  }

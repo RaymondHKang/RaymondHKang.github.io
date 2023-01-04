@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+<script> 
+
+    var currentIndex = 0;
+    const pics = ["Assets/ProfilePic0.jpg", "Assets/ProfilePic1.jpg", "Assets/ProfilePic2.jpg"]
+
+    function changeForwardImage()
+    {
+    var img = document.getElementById("ProfilePic");
+    currentIndex = currentIndex + 1;
+    if(currentIndex > 2){
+        currentIndex = 0;
+    }
+    img.src= pics[currentIndex];
+    return false;
+    }
+    
+    function changeBackwardImage()
+    {
+    var img = document.getElementById("ProfilePic");
+    currentIndex = currentIndex - 1;
+    if(currentIndex < 0){
+        currentIndex = 2;
+    }
+    img.src= pics[currentIndex];
+    return false;
+    }
+
+</script>
+</head>
+<body>
+<div id = "side">
+    <p id = "category">Skills</p>
+    <p id = "trait">C++ / Python / Java programming</p>
+    <p id = "trait">HTML / CSS / Javascript web programming</p>
+    <p id = "trait">React / Node.js web frameworks</p>
+    <p id = "trait">AI/ML techniques</p>
+    <p id = "trait">Tensorflow/Sckit/Pytorch</p>
+    <p id = "trait">x64-64/RISC-V Assembly knowledge</p>
+    <p id = "trait">Data Structures and Algorithms</p>
+    <p id = "trait">Computer Architecture/Operating Systems</p>
+    <p id = "trait">Good communication</p>
+    <p id = "trait">Excellent presentation skills</p>
+    <p id = "trait">Collaboration skills</p>
+    <p id = "trait">Organized and Punctual</p>
+    <p id = "category">Certifications</p>
+    <p id = "trait">AWS Cloud Practitioner</p>
+    <p id = "trait">Lifeguard Certification</p>
+    <p id = "category">Languages</p>
+    <p id = "trait">English</p>
+    <p id = "trait">Korean</p>
+</div>
+
+<div id = "main">
+<h1>Raymond Kang</h1>
+<div id = "TopLinks">
+    <a href = "https://www.instagram.com/raymond.h.kang/?hl=en"><img id = "logo" src = "Assets/instagram.png"></a>
+    <a href = "https://www.linkedin.com/in/raymond-kang-3262341aa"><img id = "logo" src = "Assets/linkedin.png"></a>
+    <a href = "https://github.com/RaymondHKang"><img id = "logo" src = "Assets/github.png"></a>
+</div>
+<img id = "ProfilePic" src="Assets/ProfilePic0.jpg">
+<div id = "buttons">
+    <button onclick = "changeBackwardImage()"><img id = "arrow" src = "Assets/leftarrow.png"></button>
+    <button onclick = "changeForwardImage()"><img id = "arrow" src = "Assets/rightarrow.png"></button>
+</div>
+<p id = "Introduction">Hi! My name is Raymond Kang and I am a third year student at the University of California - Davis
+     studying Computer Science (B.S.). I am currently affiliated with the 
+     <a href = "https://cogcommscience.com/members/">Computational Communication</a> lab at UC Davis. 
+     My passions with regards to Computer Science are in full stack development and 
+    anything to do with data analysis and machine learning (particularly computational neuroscience).
+     Besides programming, my other studious passions are in biology,
+    communication and neuroscience. Besides academia, I enjoy fitness, sports, nature, games and much more! 
+    <a href = "projects.html">Click here to see my projects and experiences.</a></p>
+</div>
+</body>
+</html>
