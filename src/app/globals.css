@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0f17;
+  --foreground: #e8edf7;
+  --muted: #9aa7bd;
+  --card: #121826;
+  --card-border: #243047;
+  --accent: #6ea8ff;
+  --accent-strong: #4d8dff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+section {
+  scroll-margin-top: 5rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #9ec5ff 0%, #6ea8ff 45%, #c4b5fd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card {
+  border: 1px solid var(--card-border);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--card) 92%, white 8%) 0%,
+    var(--card) 100%
+  );
+  border-radius: 1rem;
+}
+
+.section-shell {
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: var(--accent-strong);
+  color: #07111f;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  transition: transform 150ms ease, background 150ms ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--card-border);
+  color: var(--foreground);
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  transition: border-color 150ms ease, transform 150ms ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
